@@ -1,0 +1,17 @@
+---
+name: Hello
+on:
+  push:
+    branches: [main]
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Checkout repository
+          uses: actions/checkout@v4 # Use the latest recommended version
+          
+        - name: Hello $User
+          run: echo "Hello from GitHub Actions!"
+
+    
