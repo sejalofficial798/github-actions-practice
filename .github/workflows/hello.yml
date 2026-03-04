@@ -13,5 +13,16 @@ jobs:
           
         - name: Hello $User
           run: echo "Hello from GitHub Actions!"
+      
+        - name: Print date and time
+          run: date
+        
+        - name: Print the branch name
+          run: echo "The branch that triggered this run is $GITHUB_REF_NAME"
+        
+        - name: List repository files
+          run: ls -la
 
+        - name: Print runner OS
+          run: echo "The runner's OS is $RUNNER_OS"
     
